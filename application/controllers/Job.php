@@ -31,7 +31,8 @@ class Job extends Rest_Controller {
 	// Handle an incoming PUT - update a todo item
 	function index_put($key=null)
 	{
-        var_dump($this->_put_args);
+        //var_dump($this->_put_args);
+	    //$record = array_merge(array('id' => $key), $this->_put_args);
 	    $record = array_merge(array('id' => $key), $this->_put_args);
 	    $this->tasks->update($record);
 	    $this->response(array('ok'), 200);
