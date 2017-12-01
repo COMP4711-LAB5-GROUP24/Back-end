@@ -6,12 +6,12 @@
  * ------------------------------------------------------------------------
  */
 require APPPATH . '/third_party/restful/libraries/Rest_controller.php';
-class Ports extends Rest_Controller {
+class Job extends Rest_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Tasks');
 	}
+
 	// Handle an incoming GET ... return a menu item or all of them
 	function index_get($key=null)
 	{
@@ -31,6 +31,7 @@ class Ports extends Rest_Controller {
 	// Handle an incoming PUT - update a todo item
 	function index_put($key=null)
 	{
+        var_dump($this->_put_args);
 	    $record = array_merge(array('id' => $key), $this->_put_args);
 	    $this->tasks->update($record);
 	    $this->response(array('ok'), 200);
@@ -45,7 +46,7 @@ class Ports extends Rest_Controller {
 	}
 
 	// Handle an incoming DELETE - delete a todo item
-	function item_delete($key=null)
+	function index_delete($key=null)
 	{
 	    $this->tasks->delete($key);
 	    $this->response(array('ok'), 200);
