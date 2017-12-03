@@ -12,4 +12,6 @@ Start date:
 
 			16, Nov, 2017 -- lab8 A Taste of XML
 
+            03, Dec, 2017 -- lab9 RESTful server
+
 Members: Yuheng Song (CAPTAIN), Haihua Tan, Junnan Tang
